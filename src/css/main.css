@@ -1,0 +1,109 @@
+/*
+	@modCssClasses
+	@customTag: explainer-mod
+	@cssMod: mod_squeezed
+	@cssMod: mod_optionalized
+	@cssMod: mod_alignRight
+	@cssMod: mod_alignCenter
+	--theme-border 					rgba(0, 0, 0, 0.1)
+	--theme-borderStyle 			solid
+	--theme-mainFont 				rgba(0, 0, 0, 1)
+	--theme-transitionDuration 		0.15s
+	--theme-linkColor 				rgb(68, 68, 255)
+*/
+
+
+
+
+explainer-mod {
+	display: block;
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 4rem;
+	margin-left: 0;
+}
+
+explainer-mod.mod_squeezed {
+	margin-right: 0.5rem;
+	margin-left: 0.5rem;
+}
+
+explainer-mod .title {
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0.25rem;
+	margin-left: 0;
+	border-bottom-style: var(--theme-borderStyle, solid);
+	border-bottom-width: 1px;
+	border-bottom-color: var(--theme-border, rgba(0, 0, 0, 0.1));
+	transition-property: border-bottom-color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+explainer-mod .title h1, explainer-mod .title h3 {
+	color: var(--theme-mainFont, rgba(0, 0, 0, 1));
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	opacity: 0.6;
+}
+
+
+
+
+explainer-mod.mod_optionalized .text {
+	padding-top: 0.25rem;
+	padding-right: 1.5rem;
+	padding-bottom: 0.25rem;
+	padding-left: 1.5rem;
+}
+
+explainer-mod .text p, explainer-mod .text h2 {
+	color: var(--theme-secondaryFont, rgb(0, 0, 0));
+	font-size: 0.8rem;
+	border-top-left-radius: 0.25rem;
+	border-top-right-radius: 0.25rem;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	line-height: 1rem;
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+	font-weight: 400;
+}
+
+explainer-mod.mod_alignRight .text p, explainer-mod.mod_alignRight .text h2 {
+	text-align: right;
+}
+
+explainer-mod.mod_alignCenter .text p, explainer-mod.mod_alignCenter .text h2 {
+	text-align: center;
+}
+
+explainer-mod .text a {
+	color: var(--theme-linkColor, rgb(68, 68, 255));
+	text-decoration: underline;
+	text-underline-offset: 0.25rem;
+	text-decoration-style: dashed;
+	font-weight: 600;
+	transition-property: color;
+	transition-duration: var(--theme-transitionDuration, 0.15s);
+}
+
+
+
+
+@media only screen and (max-device-width: 900px) {
+
+    explainer-mod.mod_optionalized .title h3 {
+        margin-left: 0;
+    }
+
+    explainer-mod.mod_optionalized .text {
+		padding-top: 0.25rem;
+		padding-right: 0.5rem;
+		padding-bottom: 0.25rem;
+		padding-left: 0.5rem;
+    }
+
+}
